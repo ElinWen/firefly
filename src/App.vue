@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import Top from "@/components/Top"
+import Top from "@/components/Top/Top.vue"
 
 export default {
   data(){
@@ -18,6 +18,6 @@ export default {
 }
 </script>
 
-<style src="@/assets/css/my_common.scss" lang="scss"></style>
+<style src="@/assets/css/MyCommon.scss" lang="scss"></style>
 
 

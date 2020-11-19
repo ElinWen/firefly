@@ -1,0 +1,130 @@
+.top{
+  height: 30px;
+  background: #32373e;
+  color: white;
+  font-size: 12px;
+  line-height: 30px;
+  .wrap{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  a, button{
+    color: white;
+    cursor: pointer;
+    &:hover{
+      color: #ff8b00;
+    }
+  }
+  li{
+    display: inline-block;
+  }
+  .fl{
+    img{
+      vertical-align: text-top;
+    }
+    li{
+      padding-right:30px;
+    }
+  }
+  .fr{
+    li{
+      padding: 0 10px;
+      position: relative;
+      text-align: center;
+    }
+    .search{
+      position: relative;
+      input{
+        background: none;
+        border: 0;
+        border-bottom: 1px solid white;
+        color: white;
+        width: 0;
+        transition: all 0.5s;
+      }
+      button{
+        border: 0;
+        background: none;
+      }
+      .iconfont{
+        font-size: 12px;
+        padding-right: 5px;
+      }
+      .search-list{
+        position: absolute;
+        top: 24px;
+        border: 1px solid #dddddd;
+        color: #666666;
+        background: white;
+        li{
+          float: none;
+          display: block;
+          cursor: pointer;
+          text-align: left;
+          &:hover{
+            color: #00479d;
+            background: #e8f3ff;
+          }
+        }
+      }
+    }
+    .menu{
+      position: relative;
+      padding: 0;
+      .iconfont{
+        display: inline-block;
+        transition: all 0.5s;
+      }
+      &:hover{
+        .iconfont{
+          transform: rotate(-180deg);
+        }
+        ul{
+          transform: rotateX(0);
+        }
+      }
+      > a{
+        display: block;
+        width: 90px;
+      }
+      ul{
+        transform-origin: top;
+        transform: rotateX(90deg);
+        transition: all 0.5s;
+        position: absolute;
+        width: 90px;
+        box-shadow: 0 2px 5px #cccccc;
+        li{
+          padding: 0;
+          display: block;
+          position: relative;
+        }
+        a{
+          color: #666666;
+          display: block;
+          height: 24px;
+          line-height: 24px;
+          text-align: left;
+          text-indent: 20px;
+          &:hover{
+            color: #00479d;
+            background: #e8f3ff;
+          }
+        }
+      }
+    }
+  }
+  .vertical-line{
+    &:after{
+      content: "";
+      width: 1px;
+      height: 14px;
+      display: block;
+      position: absolute;
+      right: 0;
+      background: white;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+}
