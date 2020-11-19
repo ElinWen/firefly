@@ -10,8 +10,7 @@ export default {
             width: 0,
             uname: '',
             isLogin: false,
-            searchList: [],
-            showSearchList: false
+            searchList: []
         }
     },
     created(){
@@ -29,13 +28,12 @@ export default {
     watch: {
         keyword: function(val, oldVal){
             let $this = this
-            if(val.length < 4){
-                $this.showSearchList = false
+            if(val.length < 2){
                 $this.searchList = []
                 return
             }
             Axios({
-                url: '/common/search/auto_list.jhtml',
+                url: Api.searchSuggestions,
                 method: 'get',
                 params: {
                     datatype: 0,
@@ -44,7 +42,6 @@ export default {
             }).then(function (response) {
                 let data = response.data
                 $this.searchList = data.returnMsgList
-                $this.showSearchList = true
             });
         }
     },
@@ -58,12 +55,15 @@ export default {
                 alert('搜索型号不能少于2个字符！')
                 return
             }
-            window.location.href = '/search/optimal/searchKey.jhtml?keywprd='+this.keyword
+            window.location.href = Api.search+'?keywprd='+this.keyword
         },
         goToSearch(partNo){
             this.keyword = partNo
-            this.showSearchList = false
+            this.searchList = []
             this.onSubmit()
+        },
+        onBlur(){
+            this.searchList = []
         }
     }
 }

@@ -10,9 +10,9 @@
             <ul class="fr">
                 <li>
                     <form method="get" class="search" @submit.prevent="onSubmit">
-                        <input type="text" name="keyword" autocomplete="off" placeholder="型号/品牌/描述/参数" v-model.trim="keyword" :style="{width:width+'px'}" >
+                        <input type="text" name="keyword" autocomplete="off" placeholder="型号/品牌/描述/参数" v-model.trim="keyword" :style="{width:width+'px'}" @blur="onBlur">
                         <button type="submit"><i class="iconfont iconallicon-08"></i>搜索</button>
-                        <ul class="search-list" :style="{width:width-2+'px'}" v-if="showSearchList">
+                        <ul class="search-list" :style="{width:width-2+'px'}" v-if="searchList.length>0">
                             <li v-for="(item, index) in searchList" :key="index" @click="goToSearch(item.partNo)">{{item.partNo}}</li>
                         </ul>
                     </form>
