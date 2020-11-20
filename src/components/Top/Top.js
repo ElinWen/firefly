@@ -1,6 +1,7 @@
 import Api from '@/api/Api.js'
 import Axios from 'axios'
 import Cookies from 'js-cookie'
+import Utils from '@/assets/js/Utils.js'
 
 export default {
     name: 'Top',
@@ -24,25 +25,15 @@ export default {
             }).catch(function (error) {
                 console.log(error);
             });
+        this.getSearchList = Utils.debounce(this.getSearchList, 1000)
     },
     watch: {
         keyword: function(val, oldVal){
-            let $this = this
             if(val.length < 2){
-                $this.searchList = []
+                this.searchList = []
                 return
             }
-            Axios({
-                url: Api.searchSuggestions,
-                method: 'get',
-                params: {
-                    datatype: 0,
-                    keyword: $this.keyword
-                }
-            }).then(function (response) {
-                let data = response.data
-                $this.searchList = data.returnMsgList
-            });
+            this.getSearchList()
         }
     },
     methods: {
@@ -64,6 +55,24 @@ export default {
         },
         onBlur(){
             this.searchList = []
+        },
+        getSearchList(){
+            let $this = this
+            Axios({
+                url: Api.searchSuggestions,
+                method: 'get',
+                params: {
+                    datatype: 0,
+                    keyword: $this.keyword
+                }
+            }).then(function (response) {
+                let data = response.data
+                if(data.responseCode == 0){
+                    $this.searchList = []
+                }else if(data.responseCode == 1){
+                    $this.searchList = data.returnMsgList
+                }
+            });
         }
     }
 }
