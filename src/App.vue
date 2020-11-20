@@ -2,12 +2,14 @@
   <div>
     <Top></Top>
     <Header></Header>
+    
   </div>
 </template>
 
 <script>
 import Top from "@/components/Top/Top.vue"
 import Header from "@/components/Header/Header.vue"
+import Section from "./components/Section/Section";
 
 export default {
   data(){
@@ -15,7 +17,8 @@ export default {
   },
   components: {
     Top,
-    Header
+    Header,
+    Section
   }
 }
 </script>
