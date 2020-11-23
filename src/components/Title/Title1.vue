@@ -15,6 +15,7 @@
     .title{
         text-align: center;
         font-weight: bold;
+        padding: 50px 0;
         .h1{
             color: #1e1e1e;
             font-size: 36px;

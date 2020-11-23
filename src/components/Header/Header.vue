@@ -31,6 +31,7 @@
         border-radius: 25px;
         padding: 0 4px 0 25px;
         box-shadow: 0px 0px 27px rgba(0, 0, 0, 0.16);
+        white-space: nowrap;
     }
     input{
         display: inline-block;
