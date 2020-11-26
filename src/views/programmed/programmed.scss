@@ -1,0 +1,184 @@
+.page{
+   background: #f2f2f2;;
+}
+section{
+    margin-bottom: 50px;
+    background: white;
+}
+.wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.intro{
+    padding-top: 150px;
+    margin-bottom: 57px;
+
+    .fl{
+        width: 525px;
+        color: #6a6a6a;
+        font-size: 14px;
+        line-height: 24px;
+        letter-spacing: 1.4px;
+
+        p{
+            margin-bottom: 20px;
+
+            img{
+                width: 40px;
+                height: 40px;
+                padding: 2px 24px 2px 0;
+                float: left;
+            }
+        }
+    }
+}
+
+.services{
+    .content{
+        li{
+            display: none;
+            &.show{
+                display: block;
+            }
+
+            &:nth-child(1){
+                .fl{
+                    width: 438px;
+                }
+                .fr{
+                    width: 654px;
+                }
+            }
+
+            &:nth-child(2){
+                .fl{
+                    width: 424px;
+                }
+                .fr{
+                    width: 642px;
+                }
+            }
+
+            &:nth-child(3){
+                .fl{
+                    width: 424px;
+                }
+                .fr{
+                    width: 642px;
+                }
+            }
+        }
+    }
+}
+
+.advantages{
+    .content{
+        &:before{
+            content: "";
+            width: 1100px;
+            height: 1px;
+            background: #e3e3e3;
+            margin: 0 auto 90px;
+            display: block;
+            position: relative;
+            left: -10px;
+        }
+
+        &>li{
+            display: none;
+            &.show{
+                display: block;
+            }
+
+            &:nth-child(1){
+                ul{
+                    display: inline-block;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding-bottom: 80px;
+
+                    li{
+                        float: left;
+                        text-align: center;
+                        &+li{
+                            margin-left: 73px;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(2){
+                ul{
+                    display: inline-block;
+                    position: relative;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding-bottom: 80px;
+
+                    li{
+                        float: left;
+                        width: 220px;
+                        &+li{
+                            margin-left: 73px;
+                        }
+
+                        .title{
+                            font-size: 20px;
+                            line-height: 24px;
+                            font-weight: bold;
+                            color: black;
+                        }
+                    }
+                }
+            }
+
+            &:nth-child(3){
+                .fl{
+                    width: 473px;
+                    font-size: 14px;
+                    line-height: 24px;
+                    letter-spacing: 1.2px;
+                    color: #6a6a6a;
+                    padding-left: 60px;
+                }
+                .fr{
+                    width: 465px;
+                    padding-right: 70px;
+                    padding-bottom: 85px;
+                }
+            }
+        }
+    }
+}
+
+.support{
+    ul{
+        text-align: center;
+        padding-bottom: 104px;
+
+        li{
+            display: inline-block;
+
+            a{
+                display: block;
+                float: left;
+                width: 318px;
+                height: 158px;
+                position: relative;
+                cursor: auto;
+                &:first-child{
+                    margin-right: 119px;
+                }
+
+                .to{
+                    display: block;
+                    position: absolute;
+                    top: 20px;
+                    right: 20px;
+                }
+            }
+        }
+    }
+}

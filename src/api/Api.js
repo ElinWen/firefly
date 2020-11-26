@@ -1,5 +1,6 @@
 export default {
-    isLogin: '/user/ck/isUserLogin.jhtml',
-    searchSuggestions: '/common/search/auto_list.jhtml',
-    search: '/search/optimal/searchKey.jhtml'
+    isLogin: '/api/user/ck/isUserLogin.jhtml',
+    searchSuggestions: '/api/common/search/auto_list.jhtml',
+    search: '/api/search/optimal/searchKey.jhtml',
+    need: '/api/firefly/needOrder.jhtml'
 }

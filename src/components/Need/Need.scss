@@ -1,0 +1,128 @@
+section{
+   background: url(../../assets/img/42.png) center top no-repeat;
+   padding: 222px 0 100px 0;
+}
+
+.demand-box{
+    width: 1210px;
+    height: 609px;
+    background: #ffffff;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+    border-radius: 10px;
+    margin: 0 auto;
+
+    .fl{
+        background: url(../../assets/img/43.png) no-repeat;
+        width: 460px;
+        height: 100%;
+
+        p{
+            &:first-child{
+                font-size: 30px;
+                line-height: 30px;
+                padding: 55px 0 0 55px;
+                &:before{
+                    content: "";
+                    width: 8px;
+                    height: 30px;
+                    border-radius: 4px;
+                    background: white;
+                    display: inline-block;
+                    margin-right: 9px;
+                    position: relative;
+                    top: 3px;
+                }
+            }
+
+            &:nth-child(2){
+                font-size: 26px;
+                line-height: 26px;
+                padding: 85px 0 25px 55px;
+                i{
+                    font-size: 26px;
+                    margin-right: 9px;
+                }
+            }
+            color: white;
+            font-size: 18px;
+            padding: 0 0 10px 90px;
+        }
+    }
+
+    .fr{
+        width: 750px;
+        height: 100%;
+        color: #333333;
+        line-height: 40px;
+        font-size: 18px;
+
+        &>p{
+            font-size: 30px;
+            line-height: 30px;
+            border-left: 8px solid #00479d;
+            padding-left: 9px;
+            margin: 45px 0 40px 45px;
+        }
+
+        .input-box{
+            margin: 20px 0;
+            position: relative;
+
+            label:first-child{
+                display: inline-block;
+                text-align: right;
+                width: 140px;
+                padding-right: 7px;
+            }
+
+            .radio-box {
+                display: inline-block;
+
+                input{
+                    vertical-align: baseline;
+                    cursor: pointer;
+                }
+                label{
+                    padding: 0 20px 0 5px;
+                    cursor: pointer;
+                }
+            }
+
+            &>input, textarea{
+                width: 504px;
+                background: #f9f9f9;
+                line-height: 40px;
+                font-size: 18px;
+                padding-left: 10px;
+                height: 40px;
+                vertical-align: auto;
+            }
+
+            textarea{
+                height: 100px;
+                vertical-align: top;
+                resize: none;
+            }
+
+            .err{
+                position: absolute;
+                color: #d72d2d;
+                font-size: 14px;
+                right: 94px;
+                top: 0;
+            }
+        }
+
+        button[type='submit'] {
+            width: 150px;
+            height: 40px;
+            text-align: center;
+            background: #00479d;
+            color: white;
+            display: inline-block;
+            margin-left: 152px;
+            cursor: pointer;
+            font-size: 18px;
+        }
+    }
+}
